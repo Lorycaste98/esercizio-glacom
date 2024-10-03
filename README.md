@@ -12,9 +12,15 @@ Nel menu a discesa, seleziona Download ZIP.
 
 Estrai il file ZIP scaricato sul tuo computer.
 
-Apri il terminale e naviga nella cartella estratta con cd nome-della-cartella.
+Apri il terminale e naviga nella cartella estratta con 
 
-Installa le dipendenze con npm install (se il progetto usa Node.js) o secondo le istruzioni specifiche del progetto.
+### `cd nome-della-cartella`
+
+Installa le dipendenze con 
+
+### `npm install`
+
+(se il progetto usa Node.js) o secondo le istruzioni specifiche del progetto.
 
 Avvia il progetto (ad esempio npm start).
 
