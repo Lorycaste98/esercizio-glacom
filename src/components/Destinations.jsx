@@ -6,7 +6,7 @@ import Dots from '../assets/icons/dots.svg';
 // Componente che crea la sezione delle destinazioni consigliate e itera tutti gli elementi del file DestinationData.js per generare ogni card in modo dinamico
 const Destinations = () => {
   // Stato per tenere traccia dell'elemento selezionato nel menu
-  const [selectedItem, setSelectedItem] = useState(null);
+  const [selectedItem, setSelectedItem] = useState(0);
 
   // Array di elementi del menu delle destinazioni
   const menuItems = ['The Weekend Break', 'The Package Holiday', 'The Group Tour', 'Long Term Slow Travel'];
