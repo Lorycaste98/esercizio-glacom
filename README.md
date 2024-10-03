@@ -22,7 +22,10 @@ Installa le dipendenze con
 
 (se il progetto usa Node.js) o secondo le istruzioni specifiche del progetto.
 
-Avvia il progetto (ad esempio npm start).
+Avvia il progetto
+
+### `npm start`
+
 
 ### 2. Clonare il Repository usando Git (metodo più comune)
 
