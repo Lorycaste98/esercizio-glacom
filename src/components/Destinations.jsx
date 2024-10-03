@@ -3,38 +3,40 @@ import DestinationData from '../data/DestinationData';
 import DestinationItem from './DestinationItem';
 import Dots from '../assets/icons/dots.svg';
 
+// Componente che crea la sezione delle destinazioni consigliate e itera tutti gli elementi del file DestinationData.js per generare ogni card in modo dinamico
 const Destinations = () => {
-  // Stato per tenere traccia dell'elemento selezionato
+  // Stato per tenere traccia dell'elemento selezionato nel menu
   const [selectedItem, setSelectedItem] = useState(null);
 
-  // Array di elementi del menu
+  // Array di elementi del menu delle destinazioni
   const menuItems = ['The Weekend Break', 'The Package Holiday', 'The Group Tour', 'Long Term Slow Travel'];
 
   return (
     <div className="max-w-[90%] mx-auto">
+      {/* Titolo principale della sezione */}
       <h1 className="text-center font-bold text-2xl xl:text-4xl pt-28 xl:pt-60 pb-10 xl:pb-20">
         Recommended Destination
       </h1>
-      <div className="mb-16 max-w-[1024px] mx-auto">
+
+      {/* Menu di selezione delle destinazioni */}
+      <nav className="mb-16 max-w-[1024px] mx-auto">
         <ul className="flex justify-around space-x-14 xl:space-x-20 border-b-2 xl:text-lg text-black overflow-x-auto whitespace-nowrap scrollbar-hide">
           {menuItems.map((item, index) => (
             <li
               key={index}
               onClick={() => setSelectedItem(index)} // Imposta l'elemento selezionato quando viene cliccato
               className={`cursor-pointer pb-2 transition-all duration-300 ${
-                selectedItem === index
-                  ? 'font-bold border-b-4 border-black' // Bordo più spesso e nero per l'elemento selezionato
-                  : 'border-b-4 border-transparent' // Bordo trasparente per elementi non selezionati
+                selectedItem === index ? 'font-bold border-b-4 border-black' : 'border-b-4 border-transparent'
               }`}
             >
-              {item}
+              {item} {/* Nome dell'elemento del menu */}
             </li>
           ))}
         </ul>
-      </div>
+      </nav>
 
-      {/* Destinazioni */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 xl:gap-14 relative">
+      {/* Sezione di iterazione delle destinazioni */}
+      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 xl:gap-14 relative">
         <img
           src={Dots}
           alt="Dots background"
@@ -51,7 +53,7 @@ const Destinations = () => {
             duration={dest.duration}
           />
         ))}
-      </div>
+      </section>
     </div>
   );
 };
